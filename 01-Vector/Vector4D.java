@@ -9,7 +9,6 @@ import java.util.Date;
 
 public class Vector4D extends Vector3D
 {
-    // instance variables - replace the example below with your own
     private Date t;
 
     /**
