@@ -6,7 +6,7 @@ public class Pool
     {
         if(kendaraan==null)
             kendaraan= new Kendaraan[0];
-         this.kendaraan=kendaraan;
+        this.kendaraan=kendaraan;
     }
 
     public int jumlah()
