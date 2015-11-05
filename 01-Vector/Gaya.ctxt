@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=titikAcuan\ arah
+comment0.target=Gaya(Vector3D,\ Vector3D)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Gaya\r\n
+comment1.params=
+comment1.target=Vector3D\ getTitikAcuan()
+comment2.params=
+comment2.target=Vector3D\ getArah()
+numComments=3
