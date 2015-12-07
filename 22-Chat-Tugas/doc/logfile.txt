@@ -1,0 +1,47 @@
+Class documentation
+<---- javadoc command: ---->
+/usr/lib/jvm/java-6-openjdk-amd64/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.6
+-classpath
+/usr/share/bluej/bluejcore.jar:/usr/share/bluej/junit-4.8.2.jar:/usr/share/bluej/userlib/pi4j-core.jar:/usr/share/bluej/userlib/pi4j-gpio-extension.jar:/usr/share/bluej/userlib/pi4j-service.jar:/usr/share/bluej/userlib/pi4j-device.jar:/home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum
+-d
+/home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+/usr/share/bluej/bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+/home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/Terima.java
+<---- end of javadoc command ---->
+Loading source file /home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/Terima.java...
+Constructing Javadoc information...
+/home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/Terima.java:4: cannot find symbol
+symbol  : class IOEXception
+location: package java.io
+import java.io.IOEXception;
+              ^
+Standard Doclet version 1.6.0_33
+Building tree for all the packages and classes...
+Generating /home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/doc/Terima.html...
+Generating /home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/doc/package-frame.html...
+Generating /home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/doc/package-summary.html...
+Generating /home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/doc/constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating /home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/doc/allclasses-frame.html...
+Generating /home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/doc/allclasses-noframe.html...
+Generating /home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/doc/index.html...
+Generating /home/rahmad/Documents/Dropbox/rahmad.dawood@gmail.com/Dropbox/Informatika/Komdat/Code/03-04-UnicastChat-Praktikum/doc/stylesheet.css...
+1 warning
