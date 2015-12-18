@@ -40,6 +40,13 @@ public class Client {
                 } 
                 else if(perintah.equalsIgnoreCase("JUMLAH"))
                 {
+                    // Tulis ke socket
+                    Writer keluaranWriter = new OutputStreamWriter(socket.getOutputStream()); 
+                    BufferedWriter keluaranBuff = new BufferedWriter(keluaranWriter);
+                    keluaranBuff.write(perintah);
+                    keluaranBuff.write("\n");
+                    keluaranBuff.flush();
+                    
                     // Baca dari Server
                     System.out.print("Jumlah Stok Barang : ");
                     masukan = new InputStreamReader(socket.getInputStream()); 
