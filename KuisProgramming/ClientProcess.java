@@ -33,8 +33,7 @@ public class ClientProcess implements Runnable {
                     tangani();
                 }            
             }
-            catch(IOException salah) { 
-                System.out.println(salah);
+            catch(IOException salah) {
             }
             finally {
                 try { 
