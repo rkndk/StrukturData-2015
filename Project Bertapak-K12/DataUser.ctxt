@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=idUser
+comment0.target=DataUser(java.lang.String)
+comment1.params=koordinat
+comment1.target=void\ setData(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getID()
+comment3.params=waktu
+comment3.target=java.util.Date\ getDate(java.lang.String[])
+comment4.params=waktuAwal\ waktuAkhir
+comment4.target=int\ getLangkah(java.lang.String,\ java.lang.String)
+comment5.params=
+comment5.target=int\ getLangkah()
+comment6.params=waktuAwal\ waktuAkhir
+comment6.target=java.lang.String\ getRute(java.lang.String,\ java.lang.String)
+comment7.params=
+comment7.target=java.lang.String\ getRute()
+numComments=8

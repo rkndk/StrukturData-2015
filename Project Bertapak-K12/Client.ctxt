@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=ipStr\ port
+comment0.target=Client(java.lang.String,\ int)
+comment1.params=perintah
+comment1.target=java.lang.String\ perintah(java.lang.String)
+numComments=2

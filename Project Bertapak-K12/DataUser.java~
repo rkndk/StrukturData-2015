@@ -1,0 +1,124 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+public class DataUser {
+    // ID yang didaftar
+    private String idUser;
+    // Data perjalanan
+    private ArrayList<Object[]> dataUser;
+
+    public DataUser(String idUser){
+        this.idUser=idUser;
+        dataUser=new ArrayList<Object[]>();
+        setData(0,0);
+    }
+
+    public void setData(int x,int y){
+        Object[] data= new Object[3];
+        data[0]=x;
+        data[1]=y;
+        data[2]=Calendar.getInstance().getTime();
+        dataUser.add(data);
+    }
+
+    public String getID(){
+        return idUser;
+    }
+
+    public int getLangkah(String waktuAwal, String waktuAkhir){
+        int hasil=0;
+        try {
+            Calendar temp,result;
+            Date awal,akhir,current;
+            
+            temp = Calendar.getInstance();
+            temp.setTime( new SimpleDateFormat("HH.mm.ss").parse(waktuAwal ));
+
+            result = Calendar.getInstance();
+            result.set( Calendar.HOUR_OF_DAY, temp.get( Calendar.HOUR_OF_DAY ) );
+            result.set( Calendar.MINUTE, temp.get( Calendar.MINUTE ) );
+            result.set( Calendar.SECOND, temp.get( Calendar.MINUTE ) );
+            awal=result.getTime();
+            
+            temp = Calendar.getInstance();
+            temp.setTime( new SimpleDateFormat("HH.mm.ss").parse(waktuAkhir ));
+
+            result = Calendar.getInstance();
+            result.set( Calendar.HOUR_OF_DAY, temp.get( Calendar.HOUR_OF_DAY ) );
+            result.set( Calendar.MINUTE, temp.get( Calendar.MINUTE ) );
+            result.set( Calendar.SECOND, temp.get( Calendar.MINUTE ) );
+            akhir=result.getTime();
+
+             for(int i=0; i<dataUser.size() ;i++){
+                current=(Date)((dataUser.get(i))[2]);
+                if(current.after(awal)&&current.before(akhir))
+                    hasil++;
+                else if(current.after(akhir))
+                    break;
+            }
+            return hasil-1;
+        } catch (ParseException e) {
+            return -1;
+        }
+    }
+
+    public int getLangkah(){
+        int hasil=0;
+        try {
+            /*
+            Calendar temp,result;
+            Date awal,akhir,current;
+            
+            temp = Calendar.getInstance();
+            temp.setTime( new SimpleDateFormat("HH.mm.ss").parse(waktuAwal ));
+
+            result = Calendar.getInstance();
+            result.set( Calendar.HOUR_OF_DAY, temp.get( Calendar.HOUR_OF_DAY ) );
+            result.set( Calendar.MINUTE, temp.get( Calendar.MINUTE ) );
+            result.set( Calendar.SECOND, temp.get( Calendar.MINUTE ) );
+            awal=result.getTime();
+            
+            temp = Calendar.getInstance();
+            temp.setTime( new SimpleDateFormat("HH.mm.ss").parse(waktuAkhir ));
+
+            result = Calendar.getInstance();
+            result.set( Calendar.HOUR_OF_DAY, temp.get( Calendar.HOUR_OF_DAY ) );
+            result.set( Calendar.MINUTE, temp.get( Calendar.MINUTE ) );
+            result.set( Calendar.SECOND, temp.get( Calendar.MINUTE ) );
+            akhir=result.getTime();
+            */
+           
+             for(int i=0; i<dataUser.size() ;i++){
+                hasil++;
+            }
+            return hasil-1;
+        } catch (ParseException e) {
+            return -1;
+        }
+    }
+    
+    public String getRute(String waktuAwal, String waktuAkhir){
+        try {
+            String hasil=null;
+            long awal,akhir,waktu;
+
+            Calendar calendar = Calendar.getInstance();
+            SimpleDateFormat sdf = new SimpleDateFormat("HH.mm.ss", Locale.US);
+            calendar.setTime(sdf.parse(waktuAwal));
+            awal=calendar.getTimeInMillis();
+            calendar.setTime(sdf.parse(waktuAkhir));
+            akhir=calendar.getTimeInMillis();
+
+            for(int i=0; (waktu=(long)((dataUser.get(i))[2]))>=awal&&waktu<=akhir;i++){
+                hasil+="("+(int)((dataUser.get(i))[0])+","+(int)((dataUser.get(i))[1])+") ";
+            }
+            return hasil;
+        } catch (ParseException e) {
+            return null;
+        }
+    }
+}
