@@ -93,7 +93,9 @@ public class DataUser {
                     hasil+="("+(String)((dataUser.get(i))[0])+") ";
                 else if(current.after(akhir))
                     break;
-            }     
+            }
+            if(hasil.length()==0)
+                hasil="tidak ada";
             return hasil;
         }
         else
